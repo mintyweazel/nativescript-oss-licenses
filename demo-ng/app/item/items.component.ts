@@ -1,3 +1,4 @@
+import * as platformModule from "tns-core-modules/platform";
 import { Component, OnInit } from "@angular/core";
 
 import { Item } from "./item";
@@ -7,7 +8,6 @@ import * as application from "application";
 import * as utils from "utils/utils";
 
 declare var com: any;
-declare var java: any;
 declare var android: any;
 
 @Component({
@@ -26,13 +26,15 @@ export class ItemsComponent implements OnInit {
         this.items = this.itemService.getItems();
     }
 
-    startOSSLicenceActivity() {
-      const ossLicensesMenuActivity = com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
-      const intent = new android.content.Intent(
-        utils.ad.getApplicationContext(),
-        ossLicensesMenuActivity.class
-      );
-      ossLicensesMenuActivity.setActivityTitle("TITLE");
-      application.android.foregroundActivity.startActivity(intent);
+    startOSSLicenseActivity() {
+        if (platformModule.isAndroid) {
+            const ossLicensesMenuActivity = com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
+            const intent = new android.content.Intent(
+              utils.ad.getApplicationContext(),
+              ossLicensesMenuActivity.class
+            );
+            ossLicensesMenuActivity.setActivityTitle("TITLE");
+            application.android.foregroundActivity.startActivity(intent);
+        }
     }
 }

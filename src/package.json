@@ -20,10 +20,14 @@
   "description": "A Nativescript plugin to utilize the android library `com.google.gms:oss-licenses`",
   "main": "nativescript-oss-licenses",
   "scripts": {
+    "demo.android": "cd ../demo && tns run android --syncAllFiles",
+    "demo.webpack.android": "cd ../demo && tns run android --bundle --env.uglify --env.snapshot --syncAllFiles",
+    "demo.ios": "cd ../demo && tns run ios --syncAllFiles",
+    "demo.webpack.ios": "cd ../demo && tns run ios --bundle --env.uglify --env.snapshot --syncAllFiles",
     "demo.ng.android": "cd ../demo-ng && tns run android --syncAllFiles",
-    "demo.ng.webpack.android": "cd ../demo-ng && ns run android --bundle --env.uglify --env.snapshot --env.aot --syncAllFiles",
+    "demo.ng.webpack.android": "cd ../demo-ng && tns run android --bundle --env.uglify --env.snapshot --env.aot --syncAllFiles",
     "demo.ng.ios": "cd ../demo-ng && tns run ios --syncAllFiles",
-    "demo.ng.webpack.ios": "cd ../demo-ng && ns run ios --bundle --env.uglify --env.snapshot --env.aot --syncAllFiles",
+    "demo.ng.webpack.ios": "cd ../demo-ng && tns run ios --bundle --env.uglify --env.snapshot --env.aot --syncAllFiles",
     "postinstall": "node postinstall.js",
     "preuninstall": "node preuninstall.js"
   },
