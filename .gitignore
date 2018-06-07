@@ -19,3 +19,4 @@ report
 .tscache
 package-lock.json
 !webpack.*.js
+*.esm.json

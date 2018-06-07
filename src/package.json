@@ -21,7 +21,9 @@
   "main": "nativescript-oss-licenses",
   "scripts": {
     "demo.ng.android": "cd ../demo-ng && tns run android --syncAllFiles",
+    "demo.ng.webpack.android": "cd ../demo-ng && ns run android --bundle --env.uglify --env.snapshot --env.aot --syncAllFiles",
     "demo.ng.ios": "cd ../demo-ng && tns run ios --syncAllFiles",
+    "demo.ng.webpack.ios": "cd ../demo-ng && ns run ios --bundle --env.uglify --env.snapshot --env.aot --syncAllFiles",
     "postinstall": "node postinstall.js",
     "preuninstall": "node preuninstall.js"
   },
