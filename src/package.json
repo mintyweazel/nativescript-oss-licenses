@@ -1,0 +1,33 @@
+{
+  "nativescript": {
+    "platforms": {
+      "android": "3.0.0"
+    },
+    "hooks": [
+      {
+        "type": "after-prepare",
+        "script": "scripts/oss-licenses-after-prepare.js",
+        "inject": true
+      }
+    ]
+  },
+  "name": "nativescript-oss-licenses",
+  "version": "0.1.1",
+  "description": "A Nativescript plugin to utilize the android library `com.google.gms:oss-licenses`",
+  "main": "nativescript-oss-licenses",
+  "scripts": {
+    "postinstall": "node postinstall.js",
+    "preuninstall": "node preuninstall.js"
+  },
+  "author": "mintyweazel",
+  "license": "MIT",
+  "keywords": [
+    "oss",
+    "licenses",
+    "android",
+    "nativescript"
+  ],
+  "dependencies": {
+    "nativescript-hook": "^0.2.4"
+  }
+}
