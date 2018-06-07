@@ -7,7 +7,7 @@ matrix:
       language: node_js
       os: linux
       node_js: "6"
-      script: cd demo && npm run tslint && cd ../demo-ng && npm run tslint
+      script: cd demo && npm i && npm run tslint && cd ../demo-ng && npm i && npm run tslint
     - stage: "WebPack, Build and Test"
       os: osx
       env:
@@ -23,7 +23,7 @@ matrix:
         - WebPack="Android"
       jdk: oraclejdk8
       before_install: nvm install 6.10.3
-      script: cd demo && npm i && tns build android --bundle --env.uglify --env.snapshot && cd ../demo-ng && tns build android --bundle --env.uglify --env.snapshot --env.aot
+      script: cd demo && npm i && tns build android --bundle --env.uglify --env.snapshot && cd ../demo-ng && npm i && tns build android --bundle --env.uglify --env.snapshot --env.aot
     - language: android
       env: 
         - BuildAndroid="26"
@@ -31,7 +31,7 @@ matrix:
       jdk: oraclejdk8
       before_install: nvm install stable
       script:
-        - cd ../demo && npm i && tns build android && cd ../demo-ng && npm i && tns build android
+        - cd demo && npm i && tns build android && cd ../demo-ng && npm i && tns build android
     - os: osx
       env: 
         - BuildiOS="11"
@@ -41,7 +41,7 @@ matrix:
       node_js: "6"
       jdk: oraclejdk8
       script: 
-        - cd ../demo && npm i && tns build ios && cd ../demo-ng && npm i && tns build ios
+        - cd demo && npm i && tns build ios && cd ../demo-ng && npm i && tns build ios
 
 android:
   components:

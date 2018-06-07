@@ -16,8 +16,8 @@
     "type": "git",
     "url": "https://github.com/mintyweazel/nativescript-oss-licenses"
   },
-  "version": "0.1.2",
-  "description": "A Nativescript plugin to utilize the android library `com.google.gms:oss-licenses`",
+  "version": "1.0.0",
+  "description": "A Nativescript plugin to list up all of the oss licenses of native library",
   "main": "nativescript-oss-licenses",
   "scripts": {
     "demo.android": "cd ../demo && tns run android --syncAllFiles",
