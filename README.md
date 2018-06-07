@@ -2,10 +2,9 @@
 
 [![Build Status](https://travis-ci.org/mintyweazel/nativescript-oss-licenses.svg?branch=master)](https://travis-ci.org/mintyweazel/nativescript-oss-licenses)
 
-This is a nativescript plugin to utilize the android library com.google.gms:oss-licenses   
-which lists up all of the oss licenses of native library targeted for android. 
+This is a nativescript plugin to list up all of the oss licenses of native library. 
 
-As for now, this plugin is only for android, and works only for native libraries.
+As for now, this plugin is **only for android**, and works only for native libraries.
 
 ![demo](https://raw.github.com/wiki/mintyweazel/nativescript-oss-licenses/images/screenshot.gif)
 
@@ -40,15 +39,17 @@ In order to use this feature, you have to modify `<project-root>/app/App_Resourc
 ### 3. Add some codes to start the activity which shows the oss licenses
 
 ```
-  startOSSLicenceActivity(){
-    const ossLicensesMenuActivity = com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
-    const intent = new android.content.Intent(
-      utils.ad.getApplicationContext(),
-      ossLicensesMenuActivity.class
-    );
-    ossLicensesMenuActivity.setActivityTitle("TITLE");
-    application.android.foregroundActivity.startActivity(intent);
-  }
+    startOSSLicenseActivity() {
+        if (platformModule.isAndroid) {
+            const ossLicensesMenuActivity = com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
+            const intent = new android.content.Intent(
+              utils.ad.getApplicationContext(),
+              ossLicensesMenuActivity.class
+            );
+            ossLicensesMenuActivity.setActivityTitle("TITLE");
+            application.android.foregroundActivity.startActivity(intent);
+        }
+    }
 ```
 
 ## License
