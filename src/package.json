@@ -12,7 +12,11 @@
     ]
   },
   "name": "nativescript-oss-licenses",
-  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mintyweazel/nativescript-oss-licenses"
+  },
+  "version": "0.1.2",
   "description": "A Nativescript plugin to utilize the android library `com.google.gms:oss-licenses`",
   "main": "nativescript-oss-licenses",
   "scripts": {
