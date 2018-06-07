@@ -20,6 +20,8 @@
   "description": "A Nativescript plugin to utilize the android library `com.google.gms:oss-licenses`",
   "main": "nativescript-oss-licenses",
   "scripts": {
+    "demo.ng.android": "cd ../demo-ng && tns run android --syncAllFiles",
+    "demo.ng.ios": "cd ../demo-ng && tns run ios --syncAllFiles",
     "postinstall": "node postinstall.js",
     "preuninstall": "node preuninstall.js"
   },

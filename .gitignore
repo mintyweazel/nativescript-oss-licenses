@@ -1,14 +1,21 @@
 node_modules
 src/*.sh
+
 demo/platforms
 demo/lib
+demo/**/*.js
+demo/**/*.map
+!demo/hooks/**/*.js
+
 demo-ng/platforms
 demo-ng/lib
-demo/*.js
-demo-ng/*.map
+demo-ng/**/*.js
+demo-ng/**/*.map
+!demo-ng/hooks/**/*.js
+
 package/
 report
 
 .tscache
-!webpack.*.js
 package-lock.json
+!webpack.*.js

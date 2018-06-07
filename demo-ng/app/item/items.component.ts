@@ -3,6 +3,13 @@ import { Component, OnInit } from "@angular/core";
 import { Item } from "./item";
 import { ItemService } from "./item.service";
 
+import * as application from "application";
+import * as utils from "utils/utils";
+
+declare var com: any;
+declare var java: any;
+declare var android: any;
+
 @Component({
     selector: "ns-items",
     moduleId: module.id,
@@ -17,5 +24,15 @@ export class ItemsComponent implements OnInit {
 
     ngOnInit(): void {
         this.items = this.itemService.getItems();
+    }
+
+    startOSSLicenceActivity() {
+      const ossLicensesMenuActivity = com.google.android.gms.oss.licenses.OssLicensesMenuActivity;
+      const intent = new android.content.Intent(
+        utils.ad.getApplicationContext(),
+        ossLicensesMenuActivity.class
+      );
+      ossLicensesMenuActivity.setActivityTitle("TITLE");
+      application.android.foregroundActivity.startActivity(intent);
     }
 }
