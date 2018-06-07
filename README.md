@@ -5,6 +5,8 @@ which lists up all of the oss licenses of native library targeted for android.
 
 As for now, this plugin is only for android, and works only for native libraries.
 
+![demo](https://raw.github.com/wiki/mintyweazel/nativescript-oss-licenses/images/screenshot.gif)
+
 ## How to use
 
 ### 1. Install this plugin
