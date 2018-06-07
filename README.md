@@ -1,4 +1,6 @@
-# nativescript-oss-licenses
+# nativescript-oss-licenses 
+
+[![Build Status](https://travis-ci.org/mintyweazel/nativescript-oss-licenses.svg?branch=master)](https://travis-ci.org/mintyweazel/nativescript-oss-licenses)
 
 This is a nativescript plugin to utilize the android library com.google.gms:oss-licenses   
 which lists up all of the oss licenses of native library targeted for android. 
