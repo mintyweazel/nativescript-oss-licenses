@@ -25,14 +25,19 @@
     "postinstall": "node postinstall.js",
     "preuninstall": "node preuninstall.js"
   },
-  "author": "mintyweazel",
+  "author": {
+    "name": "mintyweazel",
+    "email": "mintyweazel_dev@examle.com"
+  },
   "license": "MIT",
   "keywords": [
     "oss",
-    "licenses",
+    "license",
     "android",
     "nativescript"
   ],
+  "homepage": "https://github.com/mintyweazel/nativescript-oss-licenses",
+  "readmeFilename": "README.md",
   "dependencies": {
     "nativescript-hook": "^0.2.4"
   }
