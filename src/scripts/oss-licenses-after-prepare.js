@@ -7,13 +7,13 @@ function patchBuildGradle(fpath,classpath){
 
   if (fs.existsSync(fpath)) {
     var buildGradleContent = fs.readFileSync(fpath).toString();
-    if(!buildGradleContent.includes(classpath)){
+    if (!buildGradleContent.includes(classpath)) {
       var newbuildGradleContent = "";
-      for(var line of buildGradleContent.split("\n")){
+      for (var line of buildGradleContent.split("\n")) {
         newbuildGradleContent += line + "\n";
         if(line.includes("dependencies {")){
           newbuildGradleContent += "        classpath '" + classpath + "'\n";
-        }      
+        }
       }
       fs.writeFileSync(fpath, newbuildGradleContent);
     }
@@ -21,10 +21,10 @@ function patchBuildGradle(fpath,classpath){
 
 }
 
-module.exports = function(logger,platformsData,projectData){
-  
+module.exports = function(logger,platformsData,projectData) {
+
   var androidPlatformDir = path.join(projectData.platformsDir, "android");
   var buildGradlePath = path.join(androidPlatformDir,"build.gradle");
-  
+
   patchBuildGradle(buildGradlePath,OSSLICENSES_CLASSPATH);
-}
+};
