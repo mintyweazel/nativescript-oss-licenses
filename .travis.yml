@@ -7,7 +7,7 @@ matrix:
       language: node_js
       os: linux
       node_js: "6"
-      script: cd demo && npm i && npm run tslint && cd ../demo-ng && npm i && npm run tslint
+      script: cd src && npm i && npm run lint && cd ../demo && npm i && npm run tslint && cd ../demo-ng && npm i && npm run tslint
     - stage: "WebPack, Build and Test"
       os: osx
       env:
