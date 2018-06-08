@@ -20,6 +20,7 @@
   "description": "A Nativescript plugin to list up all of the oss licenses of native library",
   "main": "nativescript-oss-licenses",
   "scripts": {
+    "lint": "eslint ./",
     "demo.android": "cd ../demo && tns run android --syncAllFiles",
     "demo.webpack.android": "cd ../demo && tns run android --bundle --env.uglify --env.snapshot --syncAllFiles",
     "demo.ios": "cd ../demo && tns run ios --syncAllFiles",
@@ -46,5 +47,8 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "nativescript-hook": "^0.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
   }
 }
